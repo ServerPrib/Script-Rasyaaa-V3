@@ -1,189 +1,153 @@
-<!DOCTYPE html><html lang="id">
+<!DOCTYPE html>
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Rasyaa Official Payment</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');:root {
-  --bg-color: #000e2e;
-  --text-color: #ffffff;
-  --box-bg: rgba(0, 0, 50, 0.8);
-  --box-shadow: 0 0 20px #00f;
-  --btn-bg: #000;
-  --btn-text: #00f;
-  --btn-border: #00f;
-  --copy-bg: rgba(0, 0, 255, 0.1);
-  --copy-border: #00f;
-  --popup-bg: rgba(0, 0, 255, 0.2);
-}
+    :root {
+      --primary: #2196f3;
+      --background: #0a0f2c;
+      --text: #ffffff;
+      --card: #121836;
+      --accent: #64b5f6;
+    }
 
-body {
-  font-family: 'Orbitron', sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  padding: 20px;
-  text-align: center;
-}
-.payment-box {
-  background: var(--box-bg);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: var(--box-shadow);
-  max-width: 450px;
-  margin: auto;
-}
-.thumbnail {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 0 15px #00f;
-  margin-bottom: 10px;
-}
-.neon-btn {
-  background: var(--btn-bg);
-  color: var(--btn-text);
-  border: 2px solid var(--btn-border);
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-weight: bold;
-  box-shadow: 0 0 10px var(--btn-border);
-  cursor: pointer;
-  margin-bottom: 20px;
-}
-.neon-btn:hover {
-  background: var(--btn-text);
-  color: var(--btn-bg);
-}
-.copy-box {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: var(--copy-bg);
-  border: 1px solid var(--copy-border);
-  padding: 10px;
-  border-radius: 5px;
-  margin: 10px 0;
-}
-.payment-logo {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  box-shadow: 0 0 10px var(--btn-border);
-}
-.copy-box span {
-  flex: 1;
-  margin-left: 10px;
-  text-align: left;
-}
-.copy-box button {
-  background: var(--btn-text);
-  color: var(--btn-bg);
-  border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-}
-.popup {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  align-items: center;
-  justify-content: center;
-}
-.popup-content {
-  background: var(--btn-text);
-  color: var(--btn-bg);
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 20px var(--btn-border);
-}
-.qr-image {
-  max-width: 80%;
-  height: auto;
-}
-#copyPopup {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: var(--popup-bg);
-  padding: 10px 20px;
-  border-radius: 5px;
-  color: var(--btn-text);
-  font-weight: bold;
-  display: none;
-  box-shadow: 0 0 10px var(--btn-border);
-}
-#modeToggle {
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  background: var(--btn-text);
-  color: var(--btn-bg);
-  border: none;
-  cursor: pointer;
-}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
+    body {
+      background: var(--background);
+      color: var(--text);
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 10px;
+      text-shadow: 0 0 8px var(--accent);
+    }
+
+    p.sub {
+      color: #ccc;
+      margin-bottom: 30px;
+      font-size: 1rem;
+    }
+
+    .payment-box {
+      background: var(--card);
+      padding: 30px;
+      border-radius: 15px;
+      width: 100%;
+      max-width: 450px;
+      box-shadow: 0 0 30px rgba(33,150,243,0.3);
+      animation: fadeIn 1s ease-out;
+    }
+
+    .method {
+      background: rgba(33,150,243,0.1);
+      padding: 12px 20px;
+      margin: 10px 0;
+      border-radius: 8px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid var(--accent);
+    }
+
+    .method span {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .method button {
+      background: var(--primary);
+      border: none;
+      color: #fff;
+      padding: 6px 14px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .method button:hover {
+      background: #fff;
+      color: var(--primary);
+    }
+
+    .qr-section {
+      margin-top: 30px;
+      text-align: center;
+    }
+
+    .qr-section img {
+      width: 220px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px var(--primary);
+      margin-top: 10px;
+    }
+
+    footer {
+      margin-top: 40px;
+      color: #aaa;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
-  <button id="modeToggle" onclick="toggleMode()">☀︎</button>
+
+  <h1>Rasyaa Payment</h1>
+  <p class="sub">Pilih metode pembayaran kamu dengan cepat dan mudah.</p>
+
   <div class="payment-box">
-    <img src="thumbnail.png" alt="Thumbnail" class="thumbnail">
-    <h2>Rasyaa Official Payment</h2>
-    <button class="neon-btn" onclick="showQR()">QRIS</button>
-    <div class="copy-box">
-      <img src="dana.png" class="payment-logo"><span>Dana</span><button onclick="copyToClipboard('085727264161')">Copy</button>
+    <div class="method">
+      <span>Dana</span>
+      <button onclick="copy('081234567890')">Salin</button>
     </div>
-    <div class="copy-box">
-      <img src="gopay.png" class="payment-logo"><span>GoPay</span><button onclick="copyToClipboard('085727264161')">Copy</button>
+    <div class="method">
+      <span>OVO</span>
+      <button onclick="copy('081234567890')">Salin</button>
     </div>
-    <div class="copy-box">
-      <img src="ovo.png" class="payment-logo"><span>OVO</span><button onclick="copyToClipboard('085727264161')">Copy</button>
+    <div class="method">
+      <span>Gopay</span>
+      <button onclick="copy('081234567890')">Salin</button>
     </div>
-    <div class="copy-box">
-      <img src="shopee.png" class="payment-logo"><span>ShopeePay</span><button onclick="copyToClipboard('085727264161')">Copy</button>
+    <div class="method">
+      <span>ShopeePay</span>
+      <button onclick="copy('081234567890')">Salin</button>
     </div>
-    <div class="copy-box">
-      <img src="sea.png" class="payment-logo"><span>SeaBank</span><button onclick="copyToClipboard('085727264161')">Copy</button>
+    <div class="method">
+      <span>SeaBank</span>
+      <button onclick="copy('081234567890')">Salin</button>
     </div>
-    <a href="https://saweria.co/rasyaaofficial" target="_blank" class="neon-btn">Bayar via Saweria</a>
+
+    <div class="qr-section">
+      <h3>QRIS Pembayaran</h3>
+      <img src="https://i.ibb.co/DKqZsq0/qris-example.png" alt="QRIS">
+    </div>
   </div>
-  <div class="popup" id="qrPopup" onclick="hideQR(event)">
-    <div class="popup-content">
-      <h3>Scan QRIS</h3>
-      <img src="qris.png" alt="QRIS" class="qr-image">
-    </div>
-  </div>
-  <div id="copyPopup">Disalin!</div>
+
+  <footer>© 2024 Rasyaa Official - All rights reserved.</footer>
+
   <script>
-    function showQR() {
-      document.getElementById("qrPopup").style.display = "flex";
-    }
-    function hideQR(event) {
-      if (event.target.id === "qrPopup") {
-        event.target.style.display = "none";
-      }
-    }
-    function copyToClipboard(text) {
+    function copy(text) {
       navigator.clipboard.writeText(text);
-      let popup = document.getElementById("copyPopup");
-      popup.style.display = "block";
-      setTimeout(() => popup.style.display = "none", 1500);
-    }
-    function toggleMode() {
-      document.body.classList.toggle("light-mode");
-      const modeToggle = document.getElementById("modeToggle");
-      modeToggle.textContent = document.body.classList.contains("light-mode") ? "☾" : "☀︎";
+      alert("Nomor berhasil disalin: " + text);
     }
   </script>
 </body>
