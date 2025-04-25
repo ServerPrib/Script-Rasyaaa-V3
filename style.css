@@ -1,47 +1,49 @@
-
-/* Resetting default styles */
+/* Reset default styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Body Styling */
 body {
-  background-color: #111;
+  background: url('https://files.catbox.moe/hgo1zi.jpg') no-repeat center center fixed;
+  background-size: cover;
   color: #fff;
   font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   text-align: center;
 }
 
+/* Header Styling */
 header {
-  background-color: #222;
+  background-color: rgba(34, 34, 34, 0.8); /* Transparan dengan sedikit hitam */
   padding: 1rem;
 }
 
 header .logo {
   font-size: 2rem;
-  color: #0ff;
+  color: rgb(0, 255, 255); /* Cyan */
   text-transform: uppercase;
 }
 
 nav a {
   margin: 0 1rem;
-  color: #0ff;
+  color: rgb(0, 255, 255);
   text-decoration: none;
   font-weight: bold;
   transition: 0.3s;
 }
 
 nav a:hover {
-  color: #f0f;
+  color: rgb(240, 0, 255); /* Magenta */
 }
 
 /* Hero section */
 .hero {
-  background: url('https://files.catbox.moe/hgo1zi.jpg') no-repeat center center/cover;
+  background: rgba(0, 0, 0, 0.5); /* Transparan dengan overlay hitam */
   padding: 5rem 0;
-  color: #0ff;
+  color: rgb(0, 255, 255); /* Cyan */
 }
 
 .profile-container {
@@ -55,8 +57,8 @@ nav a:hover {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 5px solid #0ff;
-  box-shadow: 0 0 15px #f0f;
+  border: 5px solid rgb(0, 255, 255); /* Cyan */
+  box-shadow: 0 0 15px rgb(240, 0, 255); /* Magenta */
 }
 
 .hero h1 {
@@ -69,20 +71,20 @@ nav a:hover {
 }
 
 .hero .btn-cta {
-  background-color: #f0f;
+  background-color: rgb(240, 0, 255); /* Magenta */
   padding: 0.8rem 2rem;
   color: #000;
   text-decoration: none;
   font-size: 1.2rem;
   border-radius: 30px;
-  box-shadow: 0 0 15px #0ff;
+  box-shadow: 0 0 15px rgb(0, 255, 255); /* Cyan */
   transition: 0.3s;
 }
 
 .hero .btn-cta:hover {
-  background-color: #0ff;
+  background-color: rgb(0, 255, 255); /* Cyan */
   color: #fff;
-  box-shadow: 0 0 20px #f0f;
+  box-shadow: 0 0 20px rgb(240, 0, 255); /* Magenta */
 }
 
 /* Payment section */
@@ -102,39 +104,39 @@ nav a:hover {
 }
 
 .payment-button {
-  background-color: #f0f;
+  background-color: rgb(240, 0, 255); /* Magenta */
   padding: 1rem 2rem;
   color: #000;
   font-size: 1.2rem;
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  box-shadow: 0 0 15px #0ff;
+  box-shadow: 0 0 15px rgb(0, 255, 255); /* Cyan */
   transition: 0.3s;
 }
 
 .payment-button:hover {
-  background-color: #0ff;
+  background-color: rgb(0, 255, 255); /* Cyan */
   color: #fff;
-  box-shadow: 0 0 20px #f0f;
+  box-shadow: 0 0 20px rgb(240, 0, 255); /* Magenta */
 }
 
 .copy-btn {
-  background-color: #0ff;
+  background-color: rgb(0, 255, 255); /* Cyan */
   padding: 0.8rem 1.5rem;
   color: #000;
   font-size: 1rem;
   border: none;
   border-radius: 30px;
   cursor: pointer;
-  box-shadow: 0 0 10px #f0f;
+  box-shadow: 0 0 10px rgb(240, 0, 255); /* Magenta */
   transition: 0.3s;
 }
 
 .copy-btn:hover {
-  background-color: #f0f;
+  background-color: rgb(240, 0, 255); /* Magenta */
   color: #fff;
-  box-shadow: 0 0 15px #0ff;
+  box-shadow: 0 0 15px rgb(0, 255, 255); /* Cyan */
 }
 
 /* Harga Paket section */
@@ -150,44 +152,44 @@ nav a:hover {
 }
 
 .card {
-  background-color: #333;
+  background-color: rgb(51, 51, 51); /* Dark gray */
   padding: 2rem;
   border-radius: 10px;
   width: 250px;
-  box-shadow: 0 0 15px #0ff;
+  box-shadow: 0 0 15px rgb(0, 255, 255); /* Cyan */
   transition: 0.3s;
 }
 
 .card h3 {
   font-size: 1.8rem;
-  color: #f0f;
+  color: rgb(240, 0, 255); /* Magenta */
   margin-bottom: 1rem;
 }
 
 .card p {
-  color: #bbb;
+  color: rgb(187, 187, 187); /* Light gray */
   font-size: 1.2rem;
 }
 
 .card:hover {
-  background-color: #444;
-  box-shadow: 0 0 20px #0ff;
+  background-color: rgb(68, 68, 68); /* Slightly lighter dark gray */
+  box-shadow: 0 0 20px rgb(0, 255, 255); /* Cyan */
 }
 
 .card .btn-cta {
-  background-color: #f0f;
+  background-color: rgb(240, 0, 255); /* Magenta */
   padding: 0.8rem 2rem;
   color: #000;
   text-decoration: none;
   border-radius: 30px;
-  box-shadow: 0 0 15px #0ff;
+  box-shadow: 0 0 15px rgb(0, 255, 255); /* Cyan */
   transition: 0.3s;
 }
 
 .card .btn-cta:hover {
-  background-color: #0ff;
+  background-color: rgb(0, 255, 255); /* Cyan */
   color: #fff;
-  box-shadow: 0 0 20px #f0f;
+  box-shadow: 0 0 20px rgb(240, 0, 255); /* Magenta */
 }
 
 /* Floating WhatsApp button */
@@ -195,10 +197,10 @@ nav a:hover {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #0ff;
+  background-color: rgb(0, 255, 255); /* Cyan */
   padding: 1rem;
   border-radius: 50%;
-  box-shadow: 0 0 20px #0ff;
+  box-shadow: 0 0 20px rgb(0, 255, 255); /* Cyan */
   color: #000;
   text-decoration: none;
   font-size: 1.5rem;
@@ -206,18 +208,18 @@ nav a:hover {
 }
 
 .wa-float:hover {
-  background-color: #f0f;
-  box-shadow: 0 0 25px #0ff;
+  background-color: rgb(240, 0, 255); /* Magenta */
+  box-shadow: 0 0 25px rgb(0, 255, 255); /* Cyan */
 }
 
 /* Footer */
 footer {
-  background-color: #222;
+  background-color: rgba(34, 34, 34, 0.8); /* Transparan dengan sedikit hitam */
   padding: 1rem;
-  color: #bbb;
+  color: rgb(187, 187, 187); /* Light gray */
 }
 
 footer p {
   margin: 0;
   font-size: 1rem;
-  }
+}
